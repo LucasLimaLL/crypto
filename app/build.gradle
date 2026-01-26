@@ -1,0 +1,55 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'br.com.lucaslima.criptograma'
+    compileSdk {
+        version = release(36)
+    }
+
+    defaultConfig {
+        applicationId "br.com.lucaslima.criptograma"
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "ADS_ENABLED", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            buildConfigField "boolean", "ADS_ENABLED", "false"
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    implementation 'androidx.navigation:navigation-fragment:2.9.6'
+    implementation 'androidx.navigation:navigation-ui:2.9.6'
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
