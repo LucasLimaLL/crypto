@@ -1,19 +1,24 @@
 package br.com.lucaslima.criptograma.features.game.application;
 
-import br.com.lucaslima.criptograma.features.game.data.PuzzleRepository;
-import br.com.lucaslima.criptograma.features.game.domain.GameState;
-import br.com.lucaslima.criptograma.features.game.domain.Puzzle;
+
+import br.com.lucaslima.criptograma.features.game.application.ports.GameSessionFactoryPort;
+import br.com.lucaslima.criptograma.features.game.domain.GameRun;
+import br.com.lucaslima.criptograma.features.game.domain.GameSession;
+import br.com.lucaslima.criptograma.features.game.domain.UndoRedoStack;
 
 public final class StartNewGameUseCase {
 
-    private final PuzzleRepository puzzleRepository;
+    private final GameSessionFactoryPort gameSessionFactoryPort;
 
-    public StartNewGameUseCase(PuzzleRepository puzzleRepository) {
-        this.puzzleRepository = puzzleRepository;
+    public StartNewGameUseCase(GameSessionFactoryPort gameSessionFactoryPort) {
+        this.gameSessionFactoryPort = gameSessionFactoryPort;
     }
 
-    public GameState execute() {
-        Puzzle puzzle = puzzleRepository.loadRandomPuzzle();
-        return new GameState(puzzle);
+    public GameRun execute() {
+        GameSession gameSession = gameSessionFactoryPort.createNewSession();
+        UndoRedoStack undoRedoStack = new UndoRedoStack();
+        return new GameRun(gameSession, undoRedoStack);
     }
+
+
 }
