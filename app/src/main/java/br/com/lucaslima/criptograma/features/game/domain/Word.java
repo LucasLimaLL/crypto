@@ -20,51 +20,56 @@ public final class Word {
     }
 
     public String code() { return code; }
-    public String hint() { return hint; }
+    public String hint() { return hint == null ? "" : hint; }
     public List<Character> letters() { return letters; }
+    public List<Character> unresolvedLetters() { return letters; }
     public int length() { return letters.size(); }
 
-    private static void validateCode(String code) {
+    private void validateCode(String code) {
         if (code == null || code.isBlank()) {
             throw new IllegalArgumentException("code must not be blank");
         }
     }
 
-    private static void validateLetters(List<Character> letters) {
+    private void validateLetters(List<Character> letters) {
         if (letters == null || letters.isEmpty()) {
             throw new IllegalArgumentException("letters must not be empty");
         }
     }
 
-    private static List<Character> normalizeLetters(List<Character> input) {
+    private List<Character> normalizeLetters(List<Character> input) {
         List<Character> output = new ArrayList<>(input.size());
 
         for (Character character : input) {
-            validateLetterNotNull(character);
-
-            char upper = Character.toUpperCase(character);
-            char normalized = removeAccent(upper);
-
-            validateLetterAZ(normalized);
-            output.add(normalized);
+            output.add(validateLetter(character));
         }
 
         return List.copyOf(output);
     }
 
-    private static void validateLetterNotNull(Character character) {
+    private char validateLetter(Character character) {
+        validateLetterNotNull(character);
+
+        char upper = Character.toUpperCase(character);
+        char normalized = removeAccent(upper);
+
+        validateLetterAZ(normalized);
+        return normalized;
+    }
+
+    private void validateLetterNotNull(Character character) {
         if (character == null) {
             throw new IllegalArgumentException("letters must not contain null");
         }
     }
 
-    private static void validateLetterAZ(char character) {
+    private void validateLetterAZ(char character) {
         if (character < 'A' || character > 'Z') {
-            throw new IllegalArgumentException("letters must contain only A–Z");
+            throw new IllegalArgumentException("letters must contain only A-Z");
         }
     }
 
-    private static char removeAccent(char character) {
+    private char removeAccent(char character) {
         String normalized = Normalizer.normalize(String.valueOf(character), Normalizer.Form.NFD)
                 .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
         return normalized.charAt(0);

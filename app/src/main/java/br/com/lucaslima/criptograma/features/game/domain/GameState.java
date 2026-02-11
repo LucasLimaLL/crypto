@@ -81,9 +81,7 @@ public final class GameState {
     private static Map<Integer, Character> normalizeGuesses(Map<Integer, Character> input) {
         var output = new HashMap<Integer, Character>(Math.max(16, input.size()));
 
-        input.entrySet().stream().forEach(entry -> {
-            Integer number = entry.getKey();
-            Character letter = entry.getValue();
+        input.forEach((number, letter) -> {
 
             validateEntryKey(number);
             validateEntryValue(letter);
@@ -111,5 +109,13 @@ public final class GameState {
         if (normalized == null || normalized.isEmpty()) {
             throw new IllegalArgumentException("letter must not be empty");
         }
+    }
+
+    public boolean hasGuessedLetter(Character letter) {
+        return guesses.containsValue(letter);
+    }
+
+    public boolean hasGuessedNumber(int number) {
+        return guesses.containsKey(number);
     }
 }
