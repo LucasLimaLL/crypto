@@ -1,92 +1,84 @@
 package br.com.lucaslima.criptograma.features.game.domain;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public final class Template {
 
-    private final Map<Integer, Character> numberToLetter;
     private final Map<Character, Integer> letterToNumber;
+    private final Map<Integer, Character> numberToLetter;
 
-    public Template(Map<Integer, Character> numberToLetter) {
-        validateInputMap(numberToLetter);
-
-        Map<Integer, Character> numberToLetterBuilder = new HashMap<>();
-        Map<Character, Integer> letterToNumberBuilder = new HashMap<>();
-
-        numberToLetter.entrySet().stream().forEach(entry -> {
-            Integer number = entry.getKey();
-            Character letter = entry.getValue();
-
-            validateNumber(number);
-            validateLetterNotNull(letter);
-
-            char normalizedLetter = normalizeLetter(letter);
-
-            validateUniqueNumber(numberToLetterBuilder, number);
-            validateUniqueLetter(letterToNumberBuilder, normalizedLetter);
-
-            numberToLetterBuilder.put(number, normalizedLetter);
-            letterToNumberBuilder.put(normalizedLetter, number);
-        });
-
-        this.numberToLetter = Map.copyOf(numberToLetterBuilder);
-        this.letterToNumber = Map.copyOf(letterToNumberBuilder);
+    public Template(Puzzle puzzle) {
+        List<Character> alphabet = buildAlphabet(puzzle);
+        this.letterToNumber = Collections.unmodifiableMap(buildLetterToNumberMap(alphabet));
+        this.numberToLetter = Collections.unmodifiableMap(buildNumberToLetterMap(alphabet));
     }
 
-    public char letterFor(int number) {
-        Character letter = numberToLetter.get(number);
-        if (letter == null) {
-            throw new IllegalStateException("Missing template mapping for number: " + number);
-        }
-        return letter;
+    public Map<Character, Integer> getLetterToNumber() {
+        return letterToNumber;
     }
 
-    public int numberFor(char letter) {
-        char normalizedLetter = Character.toUpperCase(letter);
-
-        Integer number = letterToNumber.get(normalizedLetter);
-        if (number == null) {
-            throw new IllegalStateException("Missing template mapping for letter: " + normalizedLetter);
-        }
-        return number;
-    }
-
-    public Map<Integer, Character> numberToLetterSnapshot() {
+    public Map<Integer, Character> getNumberToLetter() {
         return numberToLetter;
     }
 
-    private static void validateInputMap(Map<Integer, Character> map) {
-        if (map == null || map.isEmpty()) {
-            throw new IllegalArgumentException("numberToLetter must not be empty");
-        }
+    public Integer numberFor(char letter) {
+        return letterToNumber.get(letter);
     }
 
-    private static void validateNumber(Integer number) {
-        if (number == null || number <= 0) {
-            throw new IllegalArgumentException("number must be > 0");
-        }
+    public Character letterFor(int number) {
+        return numberToLetter.get(number);
     }
 
-    private static void validateLetterNotNull(Character letter) {
-        if (letter == null) {
-            throw new IllegalArgumentException("letter must not be null");
+    private static List<Character> buildAlphabet(Puzzle puzzle) {
+        List<Character> finalWord = getFinalWord(puzzle);
+        List<Character> alphabet = new ArrayList<>(26);
+
+        for (char c : finalWord) {
+            if (!alphabet.contains(c)) {
+                alphabet.add(c);
+            }
         }
+
+        for (char c = 'A'; c <= 'Z'; c++) {
+            if (!alphabet.contains(c)) {
+                alphabet.add(c);
+            }
+        }
+
+        return alphabet;
     }
 
-    private static char normalizeLetter(Character letter) {
-        return Character.toUpperCase(letter);
+    private static List<Character> getFinalWord(Puzzle puzzle) {
+        List<Character> finalWord = new ArrayList<>();
+        for (Word word : puzzle.words()) {
+            List<Character> lettersOnly = new ArrayList<>();
+            for (Character c : word.letters()) {
+                if (c != ' ') {
+                    lettersOnly.add(c);
+                }
+            }
+            finalWord.add(lettersOnly.get(puzzle.pickColumn()));
+        }
+        return finalWord;
     }
 
-    private static void validateUniqueNumber(Map<Integer, Character> current, Integer number) {
-        if (current.containsKey(number)) {
-            throw new IllegalArgumentException("Duplicate number in template: " + number);
+    private static Map<Character, Integer> buildLetterToNumberMap(List<Character> alphabet) {
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < alphabet.size(); i++) {
+            map.put(alphabet.get(i), i + 1);
         }
+        return map;
     }
 
-    private static void validateUniqueLetter(Map<Character, Integer> current, char letter) {
-        if (current.containsKey(letter)) {
-            throw new IllegalArgumentException("Duplicate letter in template: " + letter);
+    private static Map<Integer, Character> buildNumberToLetterMap(List<Character> alphabet) {
+        Map<Integer, Character> map = new HashMap<>();
+        for (int i = 0; i < alphabet.size(); i++) {
+            map.put(i + 1, alphabet.get(i));
         }
+        return map;
     }
 }

@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public interface PuzzleDefinitionRepository {
 
-    PuzzleDefinition getRandoPuzzleDefinition();
+    PuzzleDefinition getRandomPuzzleDefinition();
 
     Optional<PuzzleDefinition> getPuzzleDefinition(String id);
 

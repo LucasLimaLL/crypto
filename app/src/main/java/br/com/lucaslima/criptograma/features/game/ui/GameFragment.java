@@ -11,10 +11,19 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import br.com.lucaslima.criptograma.R;
+import br.com.lucaslima.criptograma.features.game.application.StartNewGameUseCase;
+import br.com.lucaslima.criptograma.features.game.data.session.DefaultGameSessionFactory;
+import br.com.lucaslima.criptograma.features.game.domain.GameRun;
 
 public class GameFragment extends Fragment {
 
-    public GameFragment() {}
+    private StartNewGameUseCase startNewGameUseCase;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        this.startNewGameUseCase = new StartNewGameUseCase(new DefaultGameSessionFactory(requireContext()));
+    }
 
     @Nullable
     @Override
@@ -22,6 +31,7 @@ public class GameFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         Log.d("GameFragment", "GameFragment created");
+        GameRun gameRun = startNewGameUseCase.execute();
         return inflater.inflate(R.layout.game_fragment, container, false);
     }
 }

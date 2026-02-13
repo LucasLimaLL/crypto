@@ -89,6 +89,6 @@ class WordTest {
     }
 
     private static Stream<Character> invalidCharacters() {
-        return Stream.of('1', '@', '-', ' ');
+        return Stream.of('1', '@', '-');
     }
 }

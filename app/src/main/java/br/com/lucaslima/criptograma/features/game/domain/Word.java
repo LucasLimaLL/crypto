@@ -23,7 +23,7 @@ public final class Word {
     public String hint() { return hint == null ? "" : hint; }
     public List<Character> letters() { return letters; }
     public List<Character> unresolvedLetters() { return letters; }
-    public int length() { return letters.size(); }
+    public int length() { return (int) letters.stream().filter(c -> c != ' ').count(); }
 
     private void validateCode(String code) {
         if (code == null || code.isBlank()) {
@@ -50,6 +50,10 @@ public final class Word {
     private char validateLetter(Character character) {
         validateLetterNotNull(character);
 
+        if (character == ' ') {
+            return ' ';
+        }
+
         char upper = Character.toUpperCase(character);
         char normalized = removeAccent(upper);
 
@@ -65,7 +69,7 @@ public final class Word {
 
     private void validateLetterAZ(char character) {
         if (character < 'A' || character > 'Z') {
-            throw new IllegalArgumentException("letters must contain only A-Z");
+            throw new IllegalArgumentException("letters must contain only A-Z and spaces");
         }
     }
 

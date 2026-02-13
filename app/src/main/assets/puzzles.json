@@ -1,0 +1,36 @@
+[
+  {
+    "puzzleId": "puzzle1",
+    "pickColumn": 0,
+    "finalHunt": "The final hint",
+    "words": [
+      {
+        "wordCode": "WORD1",
+        "wordHint": "Hint for word 1",
+        "wordText": "TEXT1"
+      },
+      {
+        "wordCode": "WORD2",
+        "wordHint": "Hint for word 2",
+        "wordText": "TEXT2"
+      }
+    ]
+  },
+  {
+    "puzzleId": "puzzle2",
+    "pickColumn": 1,
+    "finalHunt": "Another final hint",
+    "words": [
+      {
+        "wordCode": "WORD3",
+        "wordHint": "Hint for word 3",
+        "wordText": "TEXT3"
+      },
+      {
+        "wordCode": "WORD4",
+        "wordHint": "Hint for word 4",
+        "wordText": "TEXT4"
+      }
+    ]
+  }
+]

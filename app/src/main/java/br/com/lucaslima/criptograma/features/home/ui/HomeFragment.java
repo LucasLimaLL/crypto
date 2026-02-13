@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import br.com.lucaslima.criptograma.R;
 import br.com.lucaslima.criptograma.app.CriptografiaApplication;
 import br.com.lucaslima.criptograma.features.ads.ui.AdPlacement;
+import br.com.lucaslima.criptograma.features.game.application.StartNewGameUseCase;
+import br.com.lucaslima.criptograma.features.game.data.session.DefaultGameSessionFactory;
 import br.com.lucaslima.criptograma.features.game.ui.GameFragment;
 
 public class HomeFragment extends Fragment {
@@ -55,6 +57,7 @@ public class HomeFragment extends Fragment {
 
 
     private void startNewGame() {
+        Log.d("HomeFragment", "Starting new game");
         requireActivity()
                 .getSupportFragmentManager()
                 .beginTransaction()
