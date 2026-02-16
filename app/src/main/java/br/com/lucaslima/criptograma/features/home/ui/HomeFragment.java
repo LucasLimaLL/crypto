@@ -6,17 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import br.com.lucaslima.criptograma.R;
-import br.com.lucaslima.criptograma.app.CriptografiaApplication;
-import br.com.lucaslima.criptograma.features.ads.ui.AdPlacement;
-import br.com.lucaslima.criptograma.features.game.application.StartNewGameUseCase;
-import br.com.lucaslima.criptograma.features.game.data.session.DefaultGameSessionFactory;
-import br.com.lucaslima.criptograma.features.game.ui.GameFragment;
+import br.com.lucaslima.criptograma.features.cryptogram.ui.CryptogramGameFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -30,38 +25,38 @@ public class HomeFragment extends Fragment {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.home_fragment, container, false);
-        Button startNewGameButton = root.findViewById(R.id.start_new_game_button);
-        Button rankingButton = root.findViewById(R.id.ranking_button);
+        Button startNewGameCryptogramButton = root.findViewById(R.id.start_new_game_cryptogram_button);
+        Button resumeGameCryptogramButton = root.findViewById(R.id.resume_game_cryptogram_button);
 
-        startNewGameButton.setOnClickListener(
-                view -> startNewGame()
+        startNewGameCryptogramButton.setOnClickListener(
+                view -> startNewCryptogramGame()
         );
 
-        rankingButton.setOnClickListener(
-                view -> simulateRanking()
+
+        resumeGameCryptogramButton.setOnClickListener(
+                view -> resumeCryptogramGame()
         );
 
         return root;
     }
 
-    private void simulateRanking() {
-        CriptografiaApplication
-                .getInstance()
-                .getAdsFeatureGraph()
-                .getAdHost()
-                .showReward(AdPlacement.REWARD, () -> {
-                    Log.d("HomeFragment", "Reward shown");
-                    Toast.makeText(requireContext(), "Reward shown", Toast.LENGTH_SHORT).show();
-                });
-    }
 
-
-    private void startNewGame() {
-        Log.d("HomeFragment", "Starting new game");
+    private void startNewCryptogramGame() {
+        Log.d("HomeFragment", "Starting new cryptogram game");
         requireActivity()
                 .getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.main_container, new GameFragment())
+                .replace(R.id.main_container, new CryptogramGameFragment())
+                .commit();
+    }
+
+
+    private void resumeCryptogramGame() {
+        Log.d("HomeFragment", "Resuming cryptogram game");
+        requireActivity()
+                .getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_container, new CryptogramGameFragment())
                 .commit();
     }
 

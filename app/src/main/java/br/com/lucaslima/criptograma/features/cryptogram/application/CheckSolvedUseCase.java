@@ -1,0 +1,19 @@
+package br.com.lucaslima.criptograma.features.cryptogram.application;
+
+
+import br.com.lucaslima.criptograma.features.cryptogram.domain.GameRun;
+
+public final class CheckSolvedUseCase {
+
+    public boolean execute(GameRun gameRun) {
+        return gameRun.session().puzzle().words().stream()
+                .flatMap(word -> word.letters().stream())
+                .allMatch(realLetter -> isSolved(gameRun, realLetter));
+    }
+
+    private static boolean isSolved(GameRun gameRun, Character realLetter) {
+        int number = gameRun.session().template().numberFor(realLetter);
+        Character guessedLetter = gameRun.session().state().guessFor(number);
+        return guessedLetter != null && guessedLetter == realLetter;
+    }
+}

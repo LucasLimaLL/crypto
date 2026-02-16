@@ -1,39 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_logo" />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Criptograma"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="28dp" />
-
-    <Button
-        android:id="@+id/start_new_game_button"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:text="Novo Jogo"
-        android:layout_marginBottom="14dp" />
-
-    <Button
-        android:id="@+id/ranking_button"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:text="Ranking" />
+        android:layout_marginBottom="50dp"
+        android:text="Games"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tv_hint"
+        android:id="@+id/tv_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(MVP: Ranking ainda não implementado)"
-        android:layout_marginTop="18dp"
-        android:textSize="12sp" />
+        android:layout_marginBottom="16dp"
+        android:text="Criptograma"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_new_game_cryptogram_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Novo Jogo" />
+
+        <Button
+            android:id="@+id/resume_game_cryptogram_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Retomar" />
+
+    </LinearLayout>
 
 </LinearLayout>
