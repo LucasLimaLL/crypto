@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Graphify
+graphify-out/cost.json
+graphify-out/cache/

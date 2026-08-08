@@ -1,0 +1,412 @@
+{
+  "app/build.gradle": {
+    "mtime": 1770837866.0347767,
+    "ast_hash": "2b827fdfa8cdf7f148db4441438d968b",
+    "semantic_hash": "2b827fdfa8cdf7f148db4441438d968b"
+  },
+  "app/src/androidTest/java/br/com/lucaslima/criptograma/ExampleInstrumentedTest.java": {
+    "mtime": 1769454352.5826614,
+    "ast_hash": "92a7637987181111171d2d7f05611f71",
+    "semantic_hash": "92a7637987181111171d2d7f05611f71"
+  },
+  "app/src/main/assets/puzzles.json": {
+    "mtime": 1770837756.5024197,
+    "ast_hash": "5d8d4cc46adc9ee91b90b65a60d71b29",
+    "semantic_hash": "5d8d4cc46adc9ee91b90b65a60d71b29"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/app/AppMode.java": {
+    "mtime": 1769459484.0891836,
+    "ast_hash": "7725f4f0f688097c28f33ac06de11680",
+    "semantic_hash": "7725f4f0f688097c28f33ac06de11680"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/app/CriptografiaApplication.java": {
+    "mtime": 1769462612.759494,
+    "ast_hash": "621a244affaa52c6275a4951289eedcf",
+    "semantic_hash": "621a244affaa52c6275a4951289eedcf"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/app/MainActivity.java": {
+    "mtime": 1769459353.186025,
+    "ast_hash": "2564173a12cdd6589295c71c4ecc1f85",
+    "semantic_hash": "2564173a12cdd6589295c71c4ecc1f85"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/ads/AdsFeatureGraph.java": {
+    "mtime": 1769462661.9424465,
+    "ast_hash": "4af41b539fcb6c987345c9743043a815",
+    "semantic_hash": "4af41b539fcb6c987345c9743043a815"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/ads/data/AdProvider.java": {
+    "mtime": 1769461734.4991994,
+    "ast_hash": "a1216073b0325b761864243d6a446ef0",
+    "semantic_hash": "a1216073b0325b761864243d6a446ef0"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/ads/data/FakeAdProvider.java": {
+    "mtime": 1769461853.787464,
+    "ast_hash": "af3bcbdc2f7cd3426a83c74a8532636f",
+    "semantic_hash": "af3bcbdc2f7cd3426a83c74a8532636f"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/ads/ui/AdHost.java": {
+    "mtime": 1769461613.8033507,
+    "ast_hash": "2c7920689958005c9bbd2e2aac7e3629",
+    "semantic_hash": "2c7920689958005c9bbd2e2aac7e3629"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/ads/ui/AdPlacement.java": {
+    "mtime": 1769461543.868078,
+    "ast_hash": "52e482dc53a8db8ede75ffdc4dec552a",
+    "semantic_hash": "52e482dc53a8db8ede75ffdc4dec552a"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/ads/ui/AndroidAdHost.java": {
+    "mtime": 1769461959.6126184,
+    "ast_hash": "0116380e2c79eab484523583bc8748ff",
+    "semantic_hash": "0116380e2c79eab484523583bc8748ff"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/AssignLetterUseCase.java": {
+    "mtime": 1771267873.5732965,
+    "ast_hash": "197b6a87e0db0755941db9b25bea0e11",
+    "semantic_hash": "197b6a87e0db0755941db9b25bea0e11"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/BuildFinalWordUseCase.java": {
+    "mtime": 1771267873.0613818,
+    "ast_hash": "8a12abb1c7e32d4ae6d0184098f6ee9f",
+    "semantic_hash": "8a12abb1c7e32d4ae6d0184098f6ee9f"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/CheckSolvedUseCase.java": {
+    "mtime": 1771267873.5256524,
+    "ast_hash": "aafe8274ea85d8a4157ac2c31b0a1aa7",
+    "semantic_hash": "aafe8274ea85d8a4157ac2c31b0a1aa7"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/ClearLetterUseCase.java": {
+    "mtime": 1771267873.559443,
+    "ast_hash": "dae659c997a2ecb20e5d0cc16b1bfb54",
+    "semantic_hash": "dae659c997a2ecb20e5d0cc16b1bfb54"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/InitializeGameUseCase.java": {
+    "mtime": 1771272280.6568828,
+    "ast_hash": "5ae7e82f77869a7b5c4aff8d411a2591",
+    "semantic_hash": "5ae7e82f77869a7b5c4aff8d411a2591"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/RedoUseCase.java": {
+    "mtime": 1771267873.640811,
+    "ast_hash": "1012e0a1752acca8e69606d7980727c9",
+    "semantic_hash": "1012e0a1752acca8e69606d7980727c9"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/RestoreGameUseCase.java": {
+    "mtime": 1771267873.6090817,
+    "ast_hash": "3f3894c6df4c970438554643f1f5e257",
+    "semantic_hash": "3f3894c6df4c970438554643f1f5e257"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/SaveGameUseCase.java": {
+    "mtime": 1771267873.3021371,
+    "ast_hash": "19977edbf71ce980a2fad20e008fc613",
+    "semantic_hash": "19977edbf71ce980a2fad20e008fc613"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/StartNewGameUseCase.java": {
+    "mtime": 1771267873.5435529,
+    "ast_hash": "7e8f298abd5230ee17aa1c3bb99f73f9",
+    "semantic_hash": "7e8f298abd5230ee17aa1c3bb99f73f9"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/UndoUseCase.java": {
+    "mtime": 1771267873.0236566,
+    "ast_hash": "25815e43da0e878d26c7529b8a49d899",
+    "semantic_hash": "25815e43da0e878d26c7529b8a49d899"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/hint/RandomRevealLetterHintCommand.java": {
+    "mtime": 1771267873.2328537,
+    "ast_hash": "1bc6a54b073fe4fd15c6c4624764152a",
+    "semantic_hash": "1bc6a54b073fe4fd15c6c4624764152a"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/hint/RevealLetterHintCommand.java": {
+    "mtime": 1771267873.0890577,
+    "ast_hash": "b65389168c8ec72c0c1f83aec1b3a013",
+    "semantic_hash": "b65389168c8ec72c0c1f83aec1b3a013"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/hint/RevealLetterHintUseCase.java": {
+    "mtime": 1771267873.4819877,
+    "ast_hash": "fcba74a46291b68840edcb766c53abda",
+    "semantic_hash": "fcba74a46291b68840edcb766c53abda"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/hint/SpecificRevealLetterHintCommand.java": {
+    "mtime": 1771267873.622949,
+    "ast_hash": "8357b78ddf822eb531b5d6d7ffdfc1fa",
+    "semantic_hash": "8357b78ddf822eb531b5d6d7ffdfc1fa"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/hint/policies/DefaultRevealLetterHintPolicy.java": {
+    "mtime": 1771269112.7973568,
+    "ast_hash": "c6f3e7f7cf1a1916bf9d6674ad026c6b",
+    "semantic_hash": "c6f3e7f7cf1a1916bf9d6674ad026c6b"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/hint/policies/RevealLetterHintPolicy.java": {
+    "mtime": 1771267873.4046316,
+    "ast_hash": "5f25c5ca0cd4b4981dbd4d7932aa1fdf",
+    "semantic_hash": "5f25c5ca0cd4b4981dbd4d7932aa1fdf"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/ports/GameSessionFactoryPort.java": {
+    "mtime": 1771267873.2862284,
+    "ast_hash": "e53f7f3084b5bca21309e4b951d51738",
+    "semantic_hash": "e53f7f3084b5bca21309e4b951d51738"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/ports/GameSessionLoaderPort.java": {
+    "mtime": 1771267873.3260384,
+    "ast_hash": "99ef2c516ae754b782f3d791e3440c77",
+    "semantic_hash": "99ef2c516ae754b782f3d791e3440c77"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/application/ports/SnapshotRepositoryPort.java": {
+    "mtime": 1771267873.1813014,
+    "ast_hash": "462b19dfee104fa118fcf38db1319988",
+    "semantic_hash": "462b19dfee104fa118fcf38db1319988"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/mapper/DataMapper.java": {
+    "mtime": 1771267873.5097744,
+    "ast_hash": "046418dfc7c6e2b5df486b729a6ab1c0",
+    "semantic_hash": "046418dfc7c6e2b5df486b729a6ab1c0"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/puzzle/PuzzleDefinition.java": {
+    "mtime": 1771267873.418486,
+    "ast_hash": "3c4216b5c2e77a4ab759915e49011538",
+    "semantic_hash": "3c4216b5c2e77a4ab759915e49011538"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/puzzle/PuzzleDefinitionRepository.java": {
+    "mtime": 1771267873.4681034,
+    "ast_hash": "d68eb7396f098ed78a7ab62404c5128e",
+    "semantic_hash": "d68eb7396f098ed78a7ab62404c5128e"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/puzzle/PuzzleWordDefinition.java": {
+    "mtime": 1771267873.6844032,
+    "ast_hash": "4875918e0090c5905b05a6c69f89eb56",
+    "semantic_hash": "4875918e0090c5905b05a6c69f89eb56"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/puzzle/local/AssetPuzzleDefinitionRepository.java": {
+    "mtime": 1771267873.0354784,
+    "ast_hash": "36f41bc935ee9a8a42336e7b0367633d",
+    "semantic_hash": "36f41bc935ee9a8a42336e7b0367633d"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/puzzle/local/InMemoryPuzzleDefinitionRepository.java": {
+    "mtime": 1770931906.418451,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/puzzle/mapper/PuzzleDomainMapper.java": {
+    "mtime": 1771267872.9620569,
+    "ast_hash": "00cf7d44fe7afdc4dc35a22a2825bfdc",
+    "semantic_hash": "00cf7d44fe7afdc4dc35a22a2825bfdc"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/puzzle/mapper/WordDomainMapper.java": {
+    "mtime": 1771267873.6566567,
+    "ast_hash": "5387a46b18706f82df3738f20674e98b",
+    "semantic_hash": "5387a46b18706f82df3738f20674e98b"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/data/session/DefaultGameSessionFactory.java": {
+    "mtime": 1771267873.244675,
+    "ast_hash": "0497620c42cde99eccee28bbe2430189",
+    "semantic_hash": "0497620c42cde99eccee28bbe2430189"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/domain/GameRun.java": {
+    "mtime": 1771267873.1227868,
+    "ast_hash": "eb2c2674619dbb3dfb201f4126ae83eb",
+    "semantic_hash": "eb2c2674619dbb3dfb201f4126ae83eb"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/domain/GameSession.java": {
+    "mtime": 1771267872.9759643,
+    "ast_hash": "dd5f04cb989fe277887050a8c633add7",
+    "semantic_hash": "dd5f04cb989fe277887050a8c633add7"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/domain/GameSnapshot.java": {
+    "mtime": 1771267873.34195,
+    "ast_hash": "92985c241a09dd4d6662d46a458885f3",
+    "semantic_hash": "92985c241a09dd4d6662d46a458885f3"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/domain/GameState.java": {
+    "mtime": 1771267873.1613696,
+    "ast_hash": "c3062f79fa2bd9b503decad5e2acaf83",
+    "semantic_hash": "c3062f79fa2bd9b503decad5e2acaf83"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/domain/Puzzle.java": {
+    "mtime": 1771267873.1376681,
+    "ast_hash": "361e1d9989eaa2568072d84c63ad492f",
+    "semantic_hash": "361e1d9989eaa2568072d84c63ad492f"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/domain/Template.java": {
+    "mtime": 1771267873.3907468,
+    "ast_hash": "2446bdcd51fcb248b88348b348efdcd3",
+    "semantic_hash": "2446bdcd51fcb248b88348b348efdcd3"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/domain/UndoRedoStack.java": {
+    "mtime": 1771267873.4403932,
+    "ast_hash": "25ffc6e88ab576e144d02a618a16c3a5",
+    "semantic_hash": "25ffc6e88ab576e144d02a618a16c3a5"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/domain/Word.java": {
+    "mtime": 1771267872.95019,
+    "ast_hash": "8cdacd00773af704b240efbcc48c2e78",
+    "semantic_hash": "8cdacd00773af704b240efbcc48c2e78"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/exceptions/WordNotFoundException.java": {
+    "mtime": 1771267873.6962583,
+    "ast_hash": "4973697929dc2821a7b05a23d1ae3eea",
+    "semantic_hash": "4973697929dc2821a7b05a23d1ae3eea"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/CryptogramGameFragment.java": {
+    "mtime": 1771269598.418516,
+    "ast_hash": "7ee4cb3ac99473bc386a874079a124d0",
+    "semantic_hash": "7ee4cb3ac99473bc386a874079a124d0"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/CryptogramGameViewModel.java": {
+    "mtime": 1771272463.4706945,
+    "ast_hash": "a2891a8c75a4e663646da52e1fa154f2",
+    "semantic_hash": "a2891a8c75a4e663646da52e1fa154f2"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/model/CryptogramCellModel.java": {
+    "mtime": 1771270798.9642892,
+    "ast_hash": "2b912d693df3ea76c98fadc880a37347",
+    "semantic_hash": "2b912d693df3ea76c98fadc880a37347"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/model/CryptogramHighlightedCellModel.java": {
+    "mtime": 1771270915.7235765,
+    "ast_hash": "7e1691ddca3475cf58c5d5df16837003",
+    "semantic_hash": "7e1691ddca3475cf58c5d5df16837003"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/model/CryptogramHighlightedCellsModel.java": {
+    "mtime": 1771270937.70341,
+    "ast_hash": "d9d93088fe45c26a92ac89307d905ef0",
+    "semantic_hash": "d9d93088fe45c26a92ac89307d905ef0"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/model/CryptogramWordModel.java": {
+    "mtime": 1771270860.971634,
+    "ast_hash": "0e636a04adad818bb9f728c651eaecfe",
+    "semantic_hash": "0e636a04adad818bb9f728c651eaecfe"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/state/ContentCryptogramUiState.java": {
+    "mtime": 1771271514.9902203,
+    "ast_hash": "da1f75e43222ce8d02d0d638b1e4955d",
+    "semantic_hash": "da1f75e43222ce8d02d0d638b1e4955d"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/state/CryptogramUiState.java": {
+    "mtime": 1771271492.1984942,
+    "ast_hash": "a1fc5d42324c5ab9461c82fbf1ce5a39",
+    "semantic_hash": "a1fc5d42324c5ab9461c82fbf1ce5a39"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/cryptogram/ui/state/LoadingCryptogramUiState.java": {
+    "mtime": 1771271507.5114589,
+    "ast_hash": "310a6debaac139238241e75ee213c3d2",
+    "semantic_hash": "310a6debaac139238241e75ee213c3d2"
+  },
+  "app/src/main/java/br/com/lucaslima/criptograma/features/home/ui/HomeFragment.java": {
+    "mtime": 1771269112.8235302,
+    "ast_hash": "6552da27298ef14418c0f6939411748d",
+    "semantic_hash": "6552da27298ef14418c0f6939411748d"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/ExampleUnitTest.java": {
+    "mtime": 1770824653.4242122,
+    "ast_hash": "6b513a215d1c9533dd0010a7c473e5c5",
+    "semantic_hash": "6b513a215d1c9533dd0010a7c473e5c5"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/ads/AdsFeatureGraphTest.java": {
+    "mtime": 1770663818.566263,
+    "ast_hash": "565ca8052d76ae1ea18939abdb739c0c",
+    "semantic_hash": "565ca8052d76ae1ea18939abdb739c0c"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/ads/data/FakeAdProviderTest.java": {
+    "mtime": 1770663842.4194727,
+    "ast_hash": "634f5780646937a949f4729163409cdb",
+    "semantic_hash": "634f5780646937a949f4729163409cdb"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/ads/ui/AndroidAdHostTest.java": {
+    "mtime": 1770663830.5747585,
+    "ast_hash": "dbcc34941d1a18dbfd77450fa9747922",
+    "semantic_hash": "dbcc34941d1a18dbfd77450fa9747922"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/AssignLetterUseCaseTest.java": {
+    "mtime": 1771267873.0752108,
+    "ast_hash": "ea498f3d9f7691e27bcbb1709f720159",
+    "semantic_hash": "ea498f3d9f7691e27bcbb1709f720159"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/CheckSolvedUseCaseTest.java": {
+    "mtime": 1771267873.357179,
+    "ast_hash": "5c6b5a1e8f54775706f37d73cd6c6362",
+    "semantic_hash": "5c6b5a1e8f54775706f37d73cd6c6362"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/ClearLetterUseCaseTest.java": {
+    "mtime": 1771267873.4958818,
+    "ast_hash": "3a9b9eadbf98fecbe83989bc28a640ee",
+    "semantic_hash": "3a9b9eadbf98fecbe83989bc28a640ee"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/RedoUseCaseTest.java": {
+    "mtime": 1771267873.0097842,
+    "ast_hash": "319b20914ee1c762155ef25684301508",
+    "semantic_hash": "319b20914ee1c762155ef25684301508"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/RestoreGameUseCaseTest.java": {
+    "mtime": 1771267873.756066,
+    "ast_hash": "7da90e5bbe452fee9d70b0cb171b9500",
+    "semantic_hash": "7da90e5bbe452fee9d70b0cb171b9500"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/SaveGameUseCaseTest.java": {
+    "mtime": 1771267873.5931933,
+    "ast_hash": "966725790c77e57fcda7c6460ccecf78",
+    "semantic_hash": "966725790c77e57fcda7c6460ccecf78"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/StartNewGameUseCaseTest.java": {
+    "mtime": 1771267873.1069121,
+    "ast_hash": "e6bcccf3e28323b0183090ea41f7fa25",
+    "semantic_hash": "e6bcccf3e28323b0183090ea41f7fa25"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/UndoUseCaseTest.java": {
+    "mtime": 1771267873.2723553,
+    "ast_hash": "55e71972b3e8f8a1bef95040c78fa6fa",
+    "semantic_hash": "55e71972b3e8f8a1bef95040c78fa6fa"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/application/hint/policies/DefaultRevealLetterHintPolicyTest.java": {
+    "mtime": 1771267873.2129796,
+    "ast_hash": "b5b6344a995ec96cbff9e407df4af6e5",
+    "semantic_hash": "b5b6344a995ec96cbff9e407df4af6e5"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/data/puzzle/mapper/WordDomainMapperTest.java": {
+    "mtime": 1771267873.6725464,
+    "ast_hash": "fb1d2e9edfe5defd4b8607a27976a451",
+    "semantic_hash": "fb1d2e9edfe5defd4b8607a27976a451"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/domain/GameFinishedStateTest.java": {
+    "mtime": 1770825192.9718952,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/domain/GameInitialStateTest.java": {
+    "mtime": 1770825195.654711,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/domain/GameStartedStateTest.java": {
+    "mtime": 1770825198.428203,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/domain/GameStateTest.java": {
+    "mtime": 1771267873.149517,
+    "ast_hash": "b7ac37df4a99ea77047cc3b9f650381d",
+    "semantic_hash": "b7ac37df4a99ea77047cc3b9f650381d"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/domain/PuzzleTest.java": {
+    "mtime": 1771267873.722263,
+    "ast_hash": "7faa9c9dda81443d437b78311cb706f6",
+    "semantic_hash": "7faa9c9dda81443d437b78311cb706f6"
+  },
+  "app/src/test/java/br/com/lucaslima/criptograma/features/cryptogram/domain/WordTest.java": {
+    "mtime": 1771267872.9959042,
+    "ast_hash": "590f9eb1143ef529a25b936b60ffe01a",
+    "semantic_hash": "590f9eb1143ef529a25b936b60ffe01a"
+  },
+  "build.gradle": {
+    "mtime": 1769454350.396819,
+    "ast_hash": "0d150a90316a3fb424b44e4319a9fed2",
+    "semantic_hash": "0d150a90316a3fb424b44e4319a9fed2"
+  },
+  "gradlew": {
+    "mtime": 1769454345.8300729,
+    "ast_hash": "266606e78242737ef3da02a80ea0564d",
+    "semantic_hash": "266606e78242737ef3da02a80ea0564d"
+  },
+  "settings.gradle": {
+    "mtime": 1769463899.0900667,
+    "ast_hash": "cafe9b9f1d1febabf786e40eeda6c673",
+    "semantic_hash": "cafe9b9f1d1febabf786e40eeda6c673"
+  }
+}
